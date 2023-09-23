@@ -4,7 +4,7 @@ const App = ({ child }) => {
   return (
     <div>
       <Navbar />
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="mt-[100px] lg:mt-[150px] flex items-center justify-center">
         {child}
       </div>
       <Footer />

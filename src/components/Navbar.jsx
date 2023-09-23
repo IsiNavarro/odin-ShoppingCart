@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="z-5 bg-white fixed w-full flex items-center justify-between px-2 md:px-10 lg:px-20 pt-4 pb-3 md:pb-6 md:pt-7 shadow-sm">
+    <nav className="z-5 bg-white fixed top-0 left-0 w-full flex items-center justify-between px-2 md:px-10 lg:px-20 pt-4 pb-3 lg:pb-6 lg:pt-7 shadow-sm">
       <Link to={'/'}>
         <h1 className=" font-bold text-2xl lg:text-4xl px-2">RF Möbel</h1>
       </Link>
@@ -27,20 +27,20 @@ const Navbar = () => {
         {/* Desktop */}
         <ul className="hidden md:flex gap-4 text-lg lg:text-xl">
           <li>
-            <Link to={'/'}>Home</Link>
+            <Link to={'/'}>HOME</Link>
           </li>
           <li>
-            <Link to={'/catalogue'}>Catalogue</Link>
+            <Link to={'/catalogue'}>CATALOGUE</Link>
           </li>
           <li>
-            <Link to={'/about-us'}>About Us</Link>
+            <Link to={'/about-us'}>ABOUT</Link>
           </li>
         </ul>
 
         {/* Cart button */}
         <button className="p-3 flex">
           {itemsInCart > 0 && (
-            <span className="z-[8] absolute mt-[-11px] ml-[-16px] font-bold text-white border-[3px] border-white rounded-full h-[25px] w-[25px] bg-red-400 flex items-center justify-center">
+            <span className="z-[8] absolute mt-[-11px] ml-[-16px] font-bold text-white border-[3px] border-white rounded-full h-[25px] w-[25px] bg-indigo-300 flex items-center justify-center">
               {itemsInCart}
             </span>
           )}
@@ -53,18 +53,18 @@ const Navbar = () => {
               : 'md:hidden absolute z-[9] top-0 left-0 w-full h-screen bg-slate-100 flex flex-col justify-center items-center'
           }
         >
-          <li className="py-6 text-2xl font-bold">
+          <li className="py-6 text-2xl">
             <Link onClick={toogleHamburger} to="/" duration={500}>
               Home
             </Link>
           </li>
 
-          <li className="py-6 text-2xl font-bold">
+          <li className="py-6 text-2xl">
             <Link onClick={toogleHamburger} to="/catalogue" duration={500}>
               Catalogue
             </Link>
           </li>
-          <li className="py-6 text-2xl font-bold">
+          <li className="py-6 text-2xl">
             <Link onClick={toogleHamburger} to="/about-us" duration={500}>
               About Us
             </Link>
