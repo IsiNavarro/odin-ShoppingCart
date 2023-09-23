@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Lunar Lounge Sofa",
+    "category": "Sofas and Seating",
+    "description": "A sleek, low-profile sofa with clean lines and plush cushions for ultimate comfort.",
+    "price": 899,
+    "imageURL": "https://content.cylindo.com/api/v2/5022/products/9388/frames/1/9388.JPG?background=FFFFFF&feature=UPHOLSTERY:ESSENCE%20ASH&feature=ORIENTATION:RIGHT&size=1745"
+  },
+  {
+    "id": 2,
+    "name": "Aria Armchair",
+    "category": "Sofas and Seating",
+    "description": "A modern armchair featuring a minimalist silhouette and high-quality upholstery.",
+    "price": 349,
+    "imageURL": "https://e3f5r4c7.rocketcdn.me/wp-content/uploads/2022/05/Aria-Poltrona-Blanco-Gris-Sunbrella.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Nordic Oak Coffee Table",
+    "category": "Tables",
+    "description": "A simple, Scandinavian-inspired coffee table crafted from solid oak wood.",
+    "price": 299,
+    "imageURL": "https://image.architonic.com/pro2-3/20230930/51445-1-oak-nordic-coffee-table-side-cut-hq-pro-b-arcit18.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Zenith Extendable Dining Table",
+    "category": "Tables",
+    "description": "An extendable dining table designed for gatherings, combining functionality with understated elegance.",
+    "price": 649,
+    "imageURL": "https://industrialrevolution.net/wp-content/uploads/5256025925033096-01.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Harmony Platform Bed",
+    "category": "Bedroom Furniture",
+    "description": "A platform bed with clean lines and a floating appearance, perfect for a serene bedroom space.",
+    "price": 799,
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSehYYSsC3MxB8BQjqf-vWuqRE8EK9pBCTIIw&usqp=CAU"
+  },
+  {
+    "id": 6,
+    "name": "Eclipse Bedside Table",
+    "category": "Bedroom Furniture",
+    "description": "A minimalist bedside table with a drawer for discreet storage.",
+    "price": 149,
+    "imageURL": "https://turri.it/wp-content/uploads/Eclipse-bedside-table-1024x1024.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Svelte Wardrobe",
+    "category": "Storage Solutions",
+    "description": "A space-saving wardrobe with a sleek profile, ideal for modern living spaces.",
+    "price": 499,
+    "imageURL": "https://www.ikea.com/es/es/images/products/pax-combinacion-armario-blanco__0937318_pe793638_s5.jpg?f=m"
+  },
+  {
+    "id": 8,
+    "name": "Serenity Bookshelf",
+    "category": "Storage Solutions",
+    "description": "A minimalist bookshelf designed to display your favorite books and decor items.",
+    "price": 249,
+    "imageURL": "https://assets.kogan.com/images/baygallery/BFG-BG-M-A3850/1-0e3e2db161-4-beaumont-indoor-mango-wood-bookshelf-shelving-unit.jpg?auto=webp&bg-color=fff&canvas=753%2C502&fit=bounds&height=502&quality=75&width=753"
+  },
+  {
+    "id": 9,
+    "name": "Elegance Leather Sofa",
+    "category": "Sofas and Seating",
+    "description": "A luxurious leather sofa with a timeless design and plush cushions.",
+    "price": 1299,
+    "imageURL": "https://allworldfurniture.com/cdn/shop/products/LCHP3GR_1-750x750_800x.jpg?v=1571719777"
+  },
+  {
+    "id": 10,
+    "name": "Graceful Dining Chair",
+    "category": "Sofas and Seating",
+    "description": "An elegant dining chair with a curved backrest and comfortable seating.",
+    "price": 179,
+    "imageURL": "https://www.koperhuis.be/cdn/shop/products/neva-chair-leer-5_grande.jpg?v=1610280129"
+  },
+  {
+    "id": 11,
+    "name": "Modernist Glass Coffee Table",
+    "category": "Tables",
+    "description": "A contemporary glass coffee table with clean lines and a minimalist frame.",
+    "price": 429,
+    "imageURL": "https://m.media-amazon.com/images/I/6149l8dACWL.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Harmony Extendable Dining Table",
+    "category": "Tables",
+    "description": "A versatile extendable dining table designed for both functionality and style.",
+    "price": 799,
+    "imageURL": "https://www.housingunits.co.uk/media/catalog/product/cache/60968cec045f20fb06ab5f7720001507/d/0/d0e5d2b34d2d9f22c88e97ad83b35438.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Simplicity Platform Bed",
+    "category": "Bedroom Furniture",
+    "description": "A sleek platform bed with integrated storage drawers for a clutter-free bedroom.",
+    "price": 899,
+    "imageURL": "https://www.vidaxl.es/dw/image/v2/BFNS_PRD/on/demandware.static/-/Sites-vidaxl-catalog-master-sku/default/dw71aaf6a1/hi-res/436/6433/505764/832986/image_2_832986.jpg?sw=400"
+  },
+  {
+    "id": 14,
+    "name": "Minimalist Bedside Table",
+    "category": "Bedroom Furniture",
+    "description": "A compact bedside table with a single drawer for essentials.",
+    "price": 99,
+    "imageURL": "https://www.funkihomes.com/93923-large_default/charlton-two-drawer-bedside-table.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Essential Wardrobe",
+    "category": "Storage Solutions",
+    "description": "A versatile wardrobe with adjustable shelves and hanging space.",
+    "price": 449,
+    "imageURL": "https://arthauss.co.uk/cdn/shop/products/250biala.jpg?v=1644429345"
+  },
+  {
+    "id": 16,
+    "name": "Sleek Bookshelf",
+    "category": "Storage Solutions",
+    "description": "A minimalist bookshelf with a mix of open and closed storage spaces.",
+    "price": 299,
+    "imageURL": "https://cdn.nvgallery.com/static/images/62f0e06fd97cc845601419.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Urban Leather Sofa",
+    "category": "Sofas and Seating",
+    "description": "A contemporary leather sofa with a urban chic vibe.",
+    "price": 1199,
+    "imageURL": "https://res.cloudinary.com/dkqtxtobb/image/upload/f_auto,q_auto:best,w_1000/product-assets/125994/article/sofas/classic-sofas/used-article-sven-charme-tan-sofa.jpeg"
+  },
+  {
+    "id": 18,
+    "name": "Simplicity Lounge Chair",
+    "category": "Sofas and Seating",
+    "description": "A comfortable lounge chair with a minimalist design for relaxed seating.",
+    "price": 249,
+    "imageURL": "https://static.vitra.com/products/41212600/LOU_41212600.LOUUNG052=1;LOU_41212600.LOUBEZ052=0075;LOU_41212600.LOUBZFLEE013=72;LOU_41212600.LOUAUS050=02;LOU_41212600.LOUFUS010=05;LOU_41212600.LOUAUS060=01.jpg"
+  }
+]

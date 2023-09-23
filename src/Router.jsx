@@ -8,6 +8,8 @@ import AboutUs from './components/AboutUs';
 import Product from './components/Product';
 import ErrorPage from './components/ErrorPage';
 
+import Products from './data/furniture.json';
+
 export const Router = () => {
   const router = createBrowserRouter([
     {
@@ -15,7 +17,10 @@ export const Router = () => {
       element: <App child={<Home />} />,
       errorElement: <ErrorPage />,
     },
-    { path: 'catalogue', element: <App child={<Catalogue />} /> },
+    {
+      path: 'catalogue',
+      element: <App child={<Catalogue products={Products} />} />,
+    },
     { path: 'about-us', element: <App child={<AboutUs />} /> },
     { path: 'product', element: <App child={<Product />} /> },
   ]);
