@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between px-2 md:px-10 lg:px-20 pt-4 pb-3 md:pb-6 md:pt-7 shadow-sm">
+    <nav className="z-5 bg-white fixed w-full flex items-center justify-between px-2 md:px-10 lg:px-20 pt-4 pb-3 md:pb-6 md:pt-7 shadow-sm">
       <Link to={'/'}>
         <h1 className=" font-bold text-2xl lg:text-4xl px-2">RF Möbel</h1>
       </Link>
