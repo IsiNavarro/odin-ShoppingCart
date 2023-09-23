@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Catalogue = ({ products }) => {
   const [items, setItems] = useState(products);
+
   const CategoryButton = ({ TextContent }) => {
     return (
-      <button className="text-center justify-center text-sm px-2 py-1 border-[1px] border-slate-950 focus:bg-slate-950 focus:text-white">
+      <button
+        onClick={handleCategoryButton}
+        className="text-center justify-center text-sm px-2 py-1 border-[1px] border-slate-950 focus:bg-slate-950 focus:text-white"
+      >
         {TextContent}
       </button>
     );
@@ -26,12 +30,26 @@ const Catalogue = ({ products }) => {
       </Link>
     );
   };
+
+  function handleCategoryButton(event) {
+    if (event.target.textContent === 'VIEW ALL') {
+      setItems(products);
+      return;
+    }
+
+    setItems(
+      products.filter((product) => {
+        return product.category.toUpperCase() === event.target.textContent;
+      })
+    );
+  }
+
   return (
     <section className="min-h-screen lg:px-56">
       <h2 className="font-bold text-center py-2">VIEW ALL OUR CATALOGUE</h2>
       <div className="flex flex-wrap gap-1 items-center justify-center">
         <CategoryButton TextContent={'VIEW ALL'} />
-        <CategoryButton TextContent={'SOFAS AND SITTING'} />
+        <CategoryButton TextContent={'SOFAS AND SEATING'} />
         <CategoryButton TextContent={'TABLES'} />
         <CategoryButton TextContent={'BEDROOM FURNITURE'} />
         <CategoryButton TextContent={'STORAGE SOLUTIONS'} />
