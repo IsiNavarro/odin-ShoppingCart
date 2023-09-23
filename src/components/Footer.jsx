@@ -2,8 +2,8 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer
-      className="w-full bg-slate-950 h-28 text-white
-    flex items-center justify-center text-lg md:text-xl font-bold"
+      className="w-full mt-10 bg-[#ffebce3f] h-20
+    flex items-center justify-center text-lg font-bold"
     >
       <p>
         Copyright © {year}
