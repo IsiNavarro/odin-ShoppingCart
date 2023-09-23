@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="z-5 bg-white fixed top-0 left-0 w-full flex items-center justify-between px-2 md:px-10 lg:px-20 pt-4 pb-3 shadow-sm">
       <Link to={'/'}>
-        <h1 className=" font-bold text-2xl lg:text-3xl px-2">RF Möbel</h1>
+        <h1 className=" font-bold text-xl lg:text-2xl px-2">RF Möbel</h1>
       </Link>
 
       <div className="flex items-center md:gap-20 px-2">
@@ -25,7 +25,7 @@ const Navbar = () => {
         </button>
 
         {/* Desktop */}
-        <ul className="hidden md:flex gap-4 text-lg">
+        <ul className="hidden md:flex gap-4">
           <li>
             <Link to={'/'}>HOME</Link>
           </li>
@@ -50,21 +50,21 @@ const Navbar = () => {
           className={
             !displayMenu
               ? 'hidden'
-              : 'md:hidden absolute z-[9] top-0 left-0 w-full h-screen bg-slate-100 flex flex-col justify-center items-center'
+              : 'md:hidden absolute z-[9] top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center'
           }
         >
-          <li className="py-6 text-2xl">
+          <li className="py-6 text-xl">
             <Link onClick={toogleHamburger} to="/" duration={500}>
               Home
             </Link>
           </li>
 
-          <li className="py-6 text-2xl">
+          <li className="py-6 text-xl">
             <Link onClick={toogleHamburger} to="/catalogue" duration={500}>
               Catalogue
             </Link>
           </li>
-          <li className="py-6 text-2xl">
+          <li className="py-6 text-xl">
             <Link onClick={toogleHamburger} to="/about-us" duration={500}>
               About Us
             </Link>
