@@ -22,7 +22,10 @@ export const Router = () => {
       element: <App child={<Catalogue products={Products} />} />,
     },
     { path: 'about-us', element: <App child={<AboutUs />} /> },
-    { path: 'product', element: <App child={<Product />} /> },
+    {
+      path: 'product/:productName',
+      element: <App child={<Product products={Products} />} />,
+    },
   ]);
   return <RouterProvider router={router} />;
 };

@@ -17,7 +17,7 @@ const Catalogue = ({ products }) => {
   const ProductCard = ({ imgURL, productTitle, productPrice }) => {
     return (
       <Link
-        to={productTitle}
+        to={`/product/${productTitle}`}
         className="w-36 lg:w-48 flex flex-col justify-center gap-1 text-sm"
       >
         <img
