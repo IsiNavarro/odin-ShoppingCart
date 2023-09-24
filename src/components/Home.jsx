@@ -24,7 +24,7 @@ const Home = () => {
         <img
           src={heroImage}
           alt="hero image"
-          className="blur-md w-screen h-full object-cover absolute z-[-1] top-0"
+          className="blur-[5px] w-screen h-full object-cover absolute z-[-1] top-0"
         />
         <h1 className="font-bold text-slate-950 tracking-wider text-[2rem] text-center bg-white w-full">
           REINEFORM MÖBEL
