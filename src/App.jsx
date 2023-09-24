@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CartDropDown from './components/CartDropDown';
 
-const App = ({ child, cartItems }) => {
+const App = ({ child, cartItems, deleteItemFromCart }) => {
   const [cartShowing, setCartShowing] = useState(false);
   function toggleCartShowing() {
     setCartShowing(!cartShowing);
@@ -19,6 +19,7 @@ const App = ({ child, cartItems }) => {
       {cartShowing && (
         <CartDropDown
           cartItems={cartItems}
+          deleteItemFromCart={deleteItemFromCart}
           toggleCartShowing={toggleCartShowing}
         />
       )}

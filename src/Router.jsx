@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import uniqid from 'uniqid';
 
 import App from './App';
 
@@ -22,39 +23,62 @@ export const Router = () => {
       return;
     }
 
-    const productID = counter.getAttribute('data-product');
-    console.log(productID);
-    console.log(Products);
+    const productName = counter.getAttribute('data-product');
 
-    const product = Products.filter(
-      (product) => product.id === Number.parseInt(productID)
-    )[0];
+    const product = {
+      ...Products.find((product) => product.name === productName),
+    };
 
     product.quantity = Number.parseInt(quantity);
-    console.log(product);
+    product.id = uniqid();
+
     setCartItems((prevItems) => [...prevItems, product]);
   }
+
+  function deleteItemFromCart(event) {
+    const itemId = event.currentTarget.id;
+    const updatedCart = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(updatedCart);
+  }
+
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <App cartItems={cartItems} child={<Home />} />,
+      element: (
+        <App
+          cartItems={cartItems}
+          deleteItemFromCart={deleteItemFromCart}
+          child={<Home />}
+        />
+      ),
       errorElement: <ErrorPage />,
     },
     {
       path: 'catalogue',
       element: (
-        <App cartItems={cartItems} child={<Catalogue products={Products} />} />
+        <App
+          cartItems={cartItems}
+          deleteItemFromCart={deleteItemFromCart}
+          child={<Catalogue products={Products} />}
+        />
       ),
     },
     {
       path: 'about-us',
-      element: <App cartItems={cartItems} child={<AboutUs />} />,
+      element: (
+        <App
+          cartItems={cartItems}
+          deleteItemFromCart={deleteItemFromCart}
+          child={<AboutUs />}
+        />
+      ),
     },
     {
       path: 'product/:productName',
       element: (
         <App
           cartItems={cartItems}
+          deleteItemFromCart={deleteItemFromCart}
           child={<Product products={Products} addItemToCart={addItemToCart} />}
         />
       ),

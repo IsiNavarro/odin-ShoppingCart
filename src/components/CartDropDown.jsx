@@ -1,11 +1,11 @@
 import { ImCross } from 'react-icons/im';
 
-const CartDropDown = ({ cartItems, toggleCartShowing }) => {
+const CartDropDown = ({ cartItems, toggleCartShowing, deleteItemFromCart }) => {
   const totalPrice = cartItems.reduce((total, item) => {
     return total + item.price * item.quantity;
   }, 0);
 
-  const Item = ({ name, image, quantity }) => {
+  const Item = ({ name, image, quantity, id, deleteItemFromCart }) => {
     return (
       <div className="flex gap-2 ">
         <img
@@ -15,23 +15,30 @@ const CartDropDown = ({ cartItems, toggleCartShowing }) => {
         />
         <div>
           <h3 className="font-bold text-sm">{name}</h3>
+          <h3>{id}</h3>
           <h4 className="text-xs">QTY: {quantity}</h4>
         </div>
-        <button className="self-start">
+        <button
+          id={id}
+          onClick={deleteItemFromCart}
+          className="self-start justify-self-end"
+        >
           <ImCross size={10} />
         </button>
       </div>
     );
   };
-  const ItemList = ({ cartItems }) => {
+  const ItemList = ({ cartItems, deleteItemFromCart }) => {
     return (
       <div className="flex flex-col gap-2">
         {cartItems.map((item) => (
           <Item
             key={item.id}
+            id={item.id}
             name={item.name}
             image={item.imageURL}
             quantity={item.quantity}
+            deleteItemFromCart={deleteItemFromCart}
           />
         ))}
       </div>
@@ -48,7 +55,10 @@ const CartDropDown = ({ cartItems, toggleCartShowing }) => {
         </div>
       ) : (
         <>
-          <ItemList cartItems={cartItems} />
+          <ItemList
+            cartItems={cartItems}
+            deleteItemFromCart={deleteItemFromCart}
+          />
           <div className="font-bold self-end mt-4 text-sm">
             Total: {totalPrice} €
           </div>

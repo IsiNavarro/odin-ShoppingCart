@@ -27,7 +27,7 @@ const Product = ({ products, addItemToCart }) => {
           </button>
           <div
             id="product-quantity"
-            data-product={product.id}
+            data-product={product.name}
             className="h-10 w-10 border-[1px] border-slate-100 flex items-center justify-center"
           >
             {quantity}
