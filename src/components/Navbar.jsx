@@ -15,7 +15,9 @@ const Navbar = ({ cartItems, toggleCartShowing }) => {
   return (
     <nav className="z-5 bg-white fixed top-0 left-0 w-full flex items-center justify-between px-2 md:px-10 lg:px-20 pt-4 pb-3 shadow-sm">
       <Link to={'/'}>
-        <h1 className=" font-bold text-xl lg:text-2xl px-2">RF Möbel</h1>
+        <h1 className="font-bold text-slate-950 text-xl lg:text-2xl px-2">
+          RF Möbel
+        </h1>
       </Link>
 
       <div className="flex items-center md:gap-20 px-2">
@@ -44,7 +46,11 @@ const Navbar = ({ cartItems, toggleCartShowing }) => {
               {itemsInCartCounter}
             </span>
           )}
-          <TfiShoppingCartFull size={32} className="lg:scale-110" />
+          <TfiShoppingCartFull
+            color={'rgb(2, 6, 23)'}
+            size={32}
+            className="lg:scale-110"
+          />
         </button>
         <ul
           className={

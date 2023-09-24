@@ -12,9 +12,7 @@ const App = ({ child, cartItems, deleteItemFromCart }) => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
       <Navbar cartItems={cartItems} toggleCartShowing={toggleCartShowing} />
-      <div className="mt-[100px] lg:mt-[125px] flex items-center justify-center">
-        {child}
-      </div>
+      <div className="flex items-center justify-center">{child}</div>
       <Footer />
       {cartShowing && (
         <CartDropDown

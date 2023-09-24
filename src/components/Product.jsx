@@ -50,7 +50,7 @@ const Product = ({ products, addItemToCart }) => {
   };
 
   return (
-    <section className="max-w-[1000px] px-4 flex items-center justify-center">
+    <section className="max-w-[1000px] mt-[100px] lg:mt-[125px] px-4 flex items-center justify-center">
       <div className="rounded-md shadow-md p-10 flex flex-col">
         <div>
           <h2 className="font-bold text-lg">{product.name.toUpperCase()}</h2>

@@ -45,7 +45,7 @@ const Catalogue = ({ products }) => {
   }
 
   return (
-    <section className="min-h-screen lg:px-56">
+    <section className="mt-[100px] lg:mt-[125px] min-h-screen lg:px-56">
       <h2 className="font-bold text-center py-2">VIEW ALL OUR CATALOGUE</h2>
       <div className="flex flex-wrap gap-1 items-center justify-center">
         <CategoryButton TextContent={'VIEW ALL'} />

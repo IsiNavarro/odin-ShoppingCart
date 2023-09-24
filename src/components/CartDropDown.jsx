@@ -7,22 +7,18 @@ const CartDropDown = ({ cartItems, toggleCartShowing, deleteItemFromCart }) => {
 
   const Item = ({ name, image, quantity, id, deleteItemFromCart }) => {
     return (
-      <div className="flex gap-2 ">
+      <div className="flex gap-2">
         <img
           className="w-[100px] h-[100px] object-cover"
           src={image}
           alt={name}
         />
-        <div>
+        <div className="w-full">
           <h3 className="font-bold text-sm">{name}</h3>
           <h3>{id}</h3>
           <h4 className="text-xs">QTY: {quantity}</h4>
         </div>
-        <button
-          id={id}
-          onClick={deleteItemFromCart}
-          className="self-start justify-self-end"
-        >
+        <button id={id} onClick={deleteItemFromCart} className="self-start">
           <ImCross size={10} />
         </button>
       </div>
@@ -51,7 +47,7 @@ const CartDropDown = ({ cartItems, toggleCartShowing, deleteItemFromCart }) => {
       </button>
       {totalPrice <= 0 ? (
         <div className="h-screen flex items-center justify-center">
-          Oops! Your cart is still empty...
+          Oops! Your cart is empty...
         </div>
       ) : (
         <>
