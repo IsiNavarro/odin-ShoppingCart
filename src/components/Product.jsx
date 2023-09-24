@@ -41,7 +41,7 @@ const Product = ({ products, addItemToCart }) => {
         </div>
         <button
           onClick={addItemToCart}
-          className="w-full bg-gray-950 text-white py-3"
+          className="w-full bg-gray-950 text-white py-3 focus:scale-[99%]"
         >
           ADD TO CART
         </button>

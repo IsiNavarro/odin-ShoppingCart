@@ -17,7 +17,10 @@ export const Router = () => {
   function addItemToCart() {
     const counter = document.getElementById('product-quantity');
     const quantity = counter.textContent;
-    if (quantity === '0') return;
+    if (quantity === '0') {
+      setCartItems((prevItems) => [...prevItems]);
+      return;
+    }
 
     const productID = counter.getAttribute('data-product');
     console.log(productID);
