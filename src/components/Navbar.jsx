@@ -4,11 +4,11 @@ import { TfiShoppingCartFull } from 'react-icons/tfi';
 import { FaBarsStaggered } from 'react-icons/fa6';
 import { ImCross } from 'react-icons/im';
 
-const Navbar = ({ cartItems }) => {
+const Navbar = ({ cartItems, toggleCartShowing }) => {
   const [displayMenu, setDisplayMenu] = useState(false);
   const itemsInCartCounter = cartItems.length;
 
-  const toogleHamburger = () => {
+  const toggleHamburger = () => {
     setDisplayMenu(!displayMenu);
   };
 
@@ -20,7 +20,7 @@ const Navbar = ({ cartItems }) => {
 
       <div className="flex items-center md:gap-20 px-2">
         {/* Hamburger */}
-        <button onClick={toogleHamburger} className="md:hidden px-4 z-10">
+        <button onClick={toggleHamburger} className="md:hidden px-4 z-10">
           {!displayMenu ? <FaBarsStaggered size={20} /> : <ImCross size={15} />}
         </button>
 
@@ -38,7 +38,7 @@ const Navbar = ({ cartItems }) => {
         </ul>
 
         {/* Cart button */}
-        <button className="p-3 flex">
+        <button className="p-3 flex" onClick={toggleCartShowing}>
           {itemsInCartCounter > 0 && (
             <span className="z-[8] text-xs absolute mt-[-11px] ml-[-16px] font-bold text-white border-[3px] border-white rounded-full h-[25px] w-[25px] bg-indigo-300 flex items-center justify-center">
               {itemsInCartCounter}
@@ -54,18 +54,18 @@ const Navbar = ({ cartItems }) => {
           }
         >
           <li className="py-6 text-xl">
-            <Link onClick={toogleHamburger} to="/" duration={500}>
+            <Link onClick={toggleHamburger} to="/" duration={500}>
               Home
             </Link>
           </li>
 
           <li className="py-6 text-xl">
-            <Link onClick={toogleHamburger} to="/catalogue" duration={500}>
+            <Link onClick={toggleHamburger} to="/catalogue" duration={500}>
               Catalogue
             </Link>
           </li>
           <li className="py-6 text-xl">
-            <Link onClick={toogleHamburger} to="/about-us" duration={500}>
+            <Link onClick={toggleHamburger} to="/about-us" duration={500}>
               About Us
             </Link>
           </li>
