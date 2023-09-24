@@ -15,7 +15,6 @@ const CartDropDown = ({ cartItems, toggleCartShowing, deleteItemFromCart }) => {
         />
         <div className="w-full">
           <h3 className="font-bold text-sm">{name}</h3>
-          <h3>{id}</h3>
           <h4 className="text-xs">QTY: {quantity}</h4>
         </div>
         <button id={id} onClick={deleteItemFromCart} className="self-start">

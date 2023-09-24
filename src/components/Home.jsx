@@ -1,4 +1,3 @@
-import Navbar from './Navbar';
 import heroImage from '../assets/hero.jpg';
 import newDimensionImage from '../assets/newDimension.jpg';
 
@@ -43,32 +42,32 @@ const Home = () => {
         DISCOVER A NEW DIMENSION
       </div>
 
-      <div className="w-full flex justify-center">
-        <div className="max-w-[800px] md:max-w-[800px] xl:max-w-[1000px] p-4 md:mt-16 flex flex-col gap-4 md:flex-row">
+      <div className="w-full flex flex-col justify-center items-center">
+        <div className="md:max-w-[800px] xl:max-w-[1000px] p-4 md:mt-16 flex flex-col items-center gap-4 md:flex-row">
           <img
             className="max-w-[320px] xl:max-w-[400px] p-2 md:border-r-4 border-slate-500"
             src={newDimensionImage}
             alt="Photo by Collov Home Design on Unsplash"
           />
-          <div className="flex flex-col gap-4 justify-end ">
-            <p className="font-bold text-sm text-slate-800 text-justify">
-              STEP INTO A REALM WHERE FURNITURE TRANSCENDS MERE FUNCTION. OUR
-              LATEST COLLECTION IS AN ODE TO THE SYMPHONY OF FORM AND PURPOSE, A
-              CANVAS WHERE AESTHETICS INTERTWINE WITH THE POETRY OF UTILITY.
-            </p>
-            <p className="font-bold text-sm text-slate-800 text-justify">
-              DIVE INTO A WORLD WHERE SIMPLICITY BECOMES ART, AND WHERE EVERY
-              FURNISHING WHISPERS TALES OF ELEGANCE AND GRACE. THIS IS MORE THAN
-              FURNITURE; IT'S AN INVITATION TO A DANCE OF SOULS IN YOUR LIVING
-              SPACES.
-            </p>
-            <Link
-              to={'/catalogue'}
-              className="bg-slate-800 text-white mt-4 self-end py-2 px-6 active:scale-95"
-            >
-              SEE OUR NEW COLLECTION
-            </Link>
-          </div>
+        </div>
+        <div className="flex flex-col gap-4 justify-end items-center">
+          <p className="font-bold text-sm text-slate-800 text-justify">
+            STEP INTO A REALM WHERE FURNITURE TRANSCENDS MERE FUNCTION. OUR
+            LATEST COLLECTION IS AN ODE TO THE SYMPHONY OF FORM AND PURPOSE, A
+            CANVAS WHERE AESTHETICS INTERTWINE WITH THE POETRY OF UTILITY.
+          </p>
+          <p className="font-bold text-sm text-slate-800 text-justify">
+            DIVE INTO A WORLD WHERE SIMPLICITY BECOMES ART, AND WHERE EVERY
+            FURNISHING WHISPERS TALES OF ELEGANCE AND GRACE. THIS IS MORE THAN
+            FURNITURE; IT'S AN INVITATION TO A DANCE OF SOULS IN YOUR LIVING
+            SPACES.
+          </p>
+          <Link
+            to={'/catalogue'}
+            className="tracking-wider bg-slate-800 text-white mt-4 self-end py-2 px-6 active:scale-95"
+          >
+            EXPLORE OUR NEWEST COLLECTION
+          </Link>
         </div>
       </div>
       <div></div>

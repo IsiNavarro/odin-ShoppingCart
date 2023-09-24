@@ -41,7 +41,7 @@ const Product = ({ products, addItemToCart }) => {
         </div>
         <button
           onClick={addItemToCart}
-          className="w-full bg-gray-950 text-white py-3 focus:scale-[99%]"
+          className="tracking-widest w-full bg-gray-950 text-white py-3 focus:scale-[99%]"
         >
           ADD TO CART
         </button>
@@ -53,8 +53,12 @@ const Product = ({ products, addItemToCart }) => {
     <section className="max-w-[1000px] mt-[100px] lg:mt-[125px] px-4 flex items-center justify-center">
       <div className="rounded-md shadow-md p-10 flex flex-col">
         <div>
-          <h2 className="font-bold text-lg">{product.name.toUpperCase()}</h2>
-          <h3 className="font-bold">{Number(product.price).toFixed(2)} €</h3>
+          <h2 className="tracking-wider font-bold text-lg">
+            {product.name.toUpperCase()}
+          </h2>
+          <h3 className="tracking-wider font-bold">
+            {Number(product.price).toFixed(2)} €
+          </h3>
         </div>
         <img
           className="w-[425px] object-cover self-center"

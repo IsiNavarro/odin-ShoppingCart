@@ -34,9 +34,6 @@ const Navbar = ({ cartItems, toggleCartShowing }) => {
           <li>
             <Link to={'/catalogue'}>CATALOGUE</Link>
           </li>
-          <li>
-            <Link to={'/about-us'}>ABOUT</Link>
-          </li>
         </ul>
 
         {/* Cart button */}
@@ -46,11 +43,7 @@ const Navbar = ({ cartItems, toggleCartShowing }) => {
               {itemsInCartCounter}
             </span>
           )}
-          <TfiShoppingCartFull
-            color={'rgb(2, 6, 23)'}
-            size={32}
-            className="lg:scale-110"
-          />
+          <TfiShoppingCartFull size={32} className="lg:scale-110" />
         </button>
         <ul
           className={
@@ -70,11 +63,7 @@ const Navbar = ({ cartItems, toggleCartShowing }) => {
               Catalogue
             </Link>
           </li>
-          <li className="py-6 text-xl">
-            <Link onClick={toggleHamburger} to="/about-us" duration={500}>
-              About Us
-            </Link>
-          </li>
+          <li className="py-6 text-xl"></li>
         </ul>
       </div>
     </nav>

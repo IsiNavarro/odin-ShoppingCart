@@ -8,7 +8,7 @@ const Catalogue = ({ products }) => {
     return (
       <button
         onClick={handleCategoryButton}
-        className="text-center justify-center text-sm px-2 py-1 border-[1px] border-slate-950 focus:bg-slate-950 focus:text-white"
+        className="tracking-widest text-center justify-center text-sm px-2 py-1 border-[1px] border-slate-950 focus:bg-slate-950 focus:text-white"
       >
         {TextContent}
       </button>
@@ -46,7 +46,9 @@ const Catalogue = ({ products }) => {
 
   return (
     <section className="mt-[100px] lg:mt-[125px] min-h-screen lg:px-56">
-      <h2 className="font-bold text-center py-2">VIEW ALL OUR CATALOGUE</h2>
+      <h2 className="tracking-widest font-bold text-center py-2">
+        VIEW ALL OUR CATALOGUE
+      </h2>
       <div className="flex flex-wrap gap-1 items-center justify-center">
         <CategoryButton TextContent={'VIEW ALL'} />
         <CategoryButton TextContent={'SOFAS AND SEATING'} />
