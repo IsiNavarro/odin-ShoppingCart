@@ -19,58 +19,51 @@ const Home = () => {
     return seasonYear;
   };
   return (
-    <section className="flex flex-col items-center">
-      <header className="h-screen flex flex-col items-center justify-center">
+    <section className="mt-20 w-full flex flex-col items-center justify-center">
+      <header className="w-full h-screen flex flex-col items-center justify-center">
         <img
-          className="absolute top-0 left-0 z-[-10] h-screen w-screen object-cover blur-md"
           src={heroImage}
-          alt=""
+          alt="hero image"
+          className="blur-md w-screen h-full object-cover absolute z-[-1] top-0"
         />
-        <div className="w-screen flex flex-col items-center">
-          <h1 className="w-full tracking-wider text-[2rem] lg:text-[4rem] text-slate-950 bg-white p-10 font-bold text-center">
-            REINEFORM MÖBEL
-          </h1>
-          <h2 className="w-full tracking-wider text-white text-[0.7rem] lg:text-[1rem] text-center p-1 font-bold bg-slate-950">
-            ESSENCE OF ELEGANT MINIMALISM
-          </h2>
-          <h3 className="font-bold tracking-wide text-slate-950 mt-8 text-2xl lg:text-3xl">
-            {getDate()}
-          </h3>
-        </div>
+        <h1 className="font-bold text-slate-950 tracking-wider text-[2rem] text-center bg-white w-full">
+          REINEFORM MÖBEL
+        </h1>
+        <h2 className="font-bold text-[0.6rem] bg-slate-950 w-full py-1 text-white text-center tracking-wider">
+          ESSENCE OF ELEGANT MINIMALISM
+        </h2>
+        <h3 className="font-bold text-2xl mt-4 tracking-wider text-slate-100">
+          {getDate()}
+        </h3>
       </header>
-      <div className="w-full bg-slate-950 text-white text-center tracking-widest text-4xl p-20">
+      <div className="bg-slate-900 text-white tracking-widest font-bold w-full flex items-center justify-center py-20">
         DISCOVER A NEW DIMENSION
       </div>
-
-      <div className="w-full flex flex-col justify-center items-center">
-        <div className="md:max-w-[800px] xl:max-w-[1000px] p-4 md:mt-16 flex flex-col items-center gap-4 md:flex-row">
+      <div className="max-w-[1200px] flex flex-col gap-4 py-4 md:py-20 px-2 md:flex-row">
+        <div className="w-full max-w-[600px] lg:max-w-[400px] border-b-2 pb-4 border-slate-500 flex items-center justify-center">
           <img
-            className="max-w-[320px] xl:max-w-[400px] p-2 md:border-r-4 border-slate-500"
+            className="w-full object-cover border-slate-800"
             src={newDimensionImage}
-            alt="Photo by Collov Home Design on Unsplash"
+            alt="furniture"
           />
         </div>
-        <div className="flex flex-col gap-4 justify-end items-center">
-          <p className="font-bold text-sm text-slate-800 text-justify">
+        <div className="text-xs tracking-wider font-bold text-slate-800 flex flex-col gap-4 items-center justify-center md:justify-end md:items-end">
+          <p>
             STEP INTO A REALM WHERE FURNITURE TRANSCENDS MERE FUNCTION. OUR
             LATEST COLLECTION IS AN ODE TO THE SYMPHONY OF FORM AND PURPOSE, A
             CANVAS WHERE AESTHETICS INTERTWINE WITH THE POETRY OF UTILITY.
           </p>
-          <p className="font-bold text-sm text-slate-800 text-justify">
+          <p>
             DIVE INTO A WORLD WHERE SIMPLICITY BECOMES ART, AND WHERE EVERY
             FURNISHING WHISPERS TALES OF ELEGANCE AND GRACE. THIS IS MORE THAN
             FURNITURE; IT'S AN INVITATION TO A DANCE OF SOULS IN YOUR LIVING
             SPACES.
           </p>
-          <Link
-            to={'/catalogue'}
-            className="tracking-wider bg-slate-800 text-white mt-4 self-end py-2 px-6 active:scale-95"
-          >
-            EXPLORE OUR NEWEST COLLECTION
-          </Link>
+          <button className="bg-slate-800 text-white w-full text-base tracking-widest py-2 flex items-center justify-center md:w-[500px]">
+            <Link to={'/catalogue'}>VIEW OUR LATEST COLLECTION</Link>
+          </button>
         </div>
       </div>
-      <div></div>
     </section>
   );
 };
