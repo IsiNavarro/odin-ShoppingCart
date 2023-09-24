@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
-const Product = ({ products }) => {
+const Product = ({ products, addItemToCart }) => {
   const [quantity, setQuantity] = useState(0);
   let { productName } = useParams();
 
@@ -15,23 +15,35 @@ const Product = ({ products }) => {
     setQuantity((prev) => prev + 1);
   }
 
-  const AddingCounter = ({ quantity }) => {
+  const AddingCounter = ({ quantity, addItemToCart }) => {
     return (
-      <div className="flex">
-        <button
-          onClick={handleReduce}
-          className="h-10 w-10 bg-gray-100 flex items-center justify-center"
-        >
-          -
-        </button>
-        <div className="h-10 w-10 border-[1px] border-slate-900 flex items-center justify-center">
-          {quantity}
+      <div className="w-full flex flex-col gap-2 self-center">
+        <div className="flex self-center">
+          <button
+            onClick={handleReduce}
+            className="h-10 w-10 bg-gray-100 flex items-center justify-center"
+          >
+            -
+          </button>
+          <div
+            id="product-quantity"
+            data-product={product.id}
+            className="h-10 w-10 border-[1px] border-slate-100 flex items-center justify-center"
+          >
+            {quantity}
+          </div>
+          <button
+            onClick={handleIncrement}
+            className="h-10 w-10 bg-gray-100 flex items-center justify-center"
+          >
+            +
+          </button>
         </div>
         <button
-          onClick={handleIncrement}
-          className="h-10 w-10 bg-gray-100 flex items-center justify-center"
+          onClick={addItemToCart}
+          className="w-full bg-gray-950 text-white py-3"
         >
-          +
+          ADD TO CART
         </button>
       </div>
     );
@@ -41,7 +53,7 @@ const Product = ({ products }) => {
     <section className="max-w-[1000px] px-4 flex items-center justify-center">
       <div className="rounded-md shadow-md p-10 flex flex-col">
         <div>
-          <h2 className="font-bold text-lg">{product.name}</h2>
+          <h2 className="font-bold text-lg">{product.name.toUpperCase()}</h2>
           <h3 className="font-bold">{Number(product.price).toFixed(2)} €</h3>
         </div>
         <img
@@ -54,10 +66,7 @@ const Product = ({ products }) => {
           <h3 className="text-xs font-bold">
             {Number(product.price).toFixed(2)} €
           </h3>
-          <AddingCounter quantity={quantity} />
-          <button className="w-full bg-gray-950 text-white py-3">
-            ADD TO CART
-          </button>
+          <AddingCounter quantity={quantity} addItemToCart={addItemToCart} />
         </div>
       </div>
     </section>

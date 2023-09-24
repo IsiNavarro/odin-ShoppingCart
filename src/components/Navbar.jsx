@@ -4,9 +4,9 @@ import { TfiShoppingCartFull } from 'react-icons/tfi';
 import { FaBarsStaggered } from 'react-icons/fa6';
 import { ImCross } from 'react-icons/im';
 
-const Navbar = () => {
+const Navbar = ({ cartItems }) => {
   const [displayMenu, setDisplayMenu] = useState(false);
-  const itemsInCart = 1;
+  const itemsInCartCounter = cartItems.length;
 
   const toogleHamburger = () => {
     setDisplayMenu(!displayMenu);
@@ -39,9 +39,9 @@ const Navbar = () => {
 
         {/* Cart button */}
         <button className="p-3 flex">
-          {itemsInCart > 0 && (
-            <span className="z-[8] absolute mt-[-11px] ml-[-16px] font-bold text-white border-[3px] border-white rounded-full h-[25px] w-[25px] bg-indigo-300 flex items-center justify-center">
-              {itemsInCart}
+          {itemsInCartCounter > 0 && (
+            <span className="z-[8] text-xs absolute mt-[-11px] ml-[-16px] font-bold text-white border-[3px] border-white rounded-full h-[25px] w-[25px] bg-indigo-300 flex items-center justify-center">
+              {itemsInCartCounter}
             </span>
           )}
           <TfiShoppingCartFull size={32} className="lg:scale-110" />
