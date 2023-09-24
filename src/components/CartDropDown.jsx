@@ -40,12 +40,12 @@ const CartDropDown = ({ cartItems, toggleCartShowing, deleteItemFromCart }) => {
     );
   };
   return (
-    <div className="fixed max-h-screen md:max-h-[500px] w-full flex flex-col gap-4 md:w-[350px] md:top-[5.5rem] md:right-24 border-2 p-2 md:p-4 bg-indigo-50 overflow-auto">
+    <div className="fixed max-h-screen md:max-h-[500px] w-full flex flex-col gap-4 md:w-[350px] top-[5.5rem] md:right-24 border-2 p-2 md:p-4 bg-indigo-50 overflow-auto">
       <button className="self-end">
         <ImCross onClick={toggleCartShowing} />
       </button>
       {totalPrice <= 0 ? (
-        <div className="h-screen flex items-center justify-center">
+        <div className="flex items-center justify-center">
           Oops! Your cart is empty...
         </div>
       ) : (
