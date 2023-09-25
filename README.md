@@ -1,6 +1,6 @@
 <h1 align="center" id="title">RF Möbel | Minimalism furniture</h1>
 
-<p id="description">This was the final React project from The Odin Project's JavaScript curriculum. The main goal of this project was to build a fake e-commerce store using React and more specifically, react-router-dom. The fake store website consists of three main parts: Home, Catalogue, an "about" Product section and a Shopping Cart to display the items the user would like to purchase.</p>
+<p id="description">This was the final React project from The Odin Project's React course, as part of the JavaScript curriculum. The main goal of this project was to build a fake e-commerce store using React and more specifically, react-router-dom. The fake store website consists of three main parts: Home, Catalogue, an "about" Product section and a Shopping Cart to display the items the user would like to purchase.</p>
 
 <h2>🚀 Live Demo</h2>
 
